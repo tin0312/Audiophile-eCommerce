@@ -1,9 +1,9 @@
 /*This page is to display the product cards for each category*/
 
-export default function SupportNav(){
+export default function ProductCard(){
     return (
         <>
-            <h2>Support Navigation</h2>
+            <h2>Product Card</h2>
         </>
     )
 }
