@@ -3,30 +3,31 @@ import Logo from "../../shared/Logo";
 
 export default function Footer() {
   return (
-    <div className="relative bottom-0 bg-black text-white h-1/5">
-      <div className="flex items-center w-4/5 h-full mx-auto">
-        <div className="flex flex-col gap-4">
+    <div className="relative bottom-0 h-1/5 bg-black text-white">
+      <div className="mx-auto flex h-full w-4/5 flex-col items-center py-20">
+        <div className="flex h-full w-full justify-between">
           <div>
             <Logo />
           </div>
-          <div className="flex flex-col w-2/3 gap-4 opacity-50 text-sm leading-6">
-            <p>
-              Audiophile is an all in one stop to fulfill your audio needs.
-              We're a small team of music lovers and sound specialists who are
-              devoted to helping you get the most out of personal audio. Come
-              and visit our demo facility - we’re open 7 days a week.
-            </p>
-            <p>Copyright 2021. All Rights Reserved</p>
-          </div>
-        </div>
-        <div className="h-2/3 flex flex-col gap-20">
           <div className="flex gap-6 text-sm uppercase">
             <Link href="/">Home</Link>
             <Link href="/category/headphone">Headphones</Link>
             <Link href="/category/earphone">Earphone</Link>
             <Link href="/category/speaker">Speaker</Link>
           </div>
-          <div className="flex gap-4 self-end">
+        </div>
+        <div className="flex h-full">
+          <div className="mt-8 flex flex-col gap-8">
+            <p className="w-1/2 opacity-50">
+              Audiophile is an all in one stop to fulfill your audio needs.
+              We're a small team of music lovers and sound specialists who are
+              devoted to helping you get the most out of personal audio. Come
+              and visit our demo facility - we’re open 7 days a week.
+            </p>
+            <p className="opacity-50">Copyright 2021. All Rights Reserved</p>
+          </div>
+          {/* Social Icon Container */}
+          <div className="flex gap-4 items-center">
             <Link href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +39,8 @@ export default function Footer() {
                 <path
                   d="M22.675 0H1.325C0.593 0 0 0.593 0 1.325V22.676C0 23.407 0.593 24 1.325 24H12.82V14.706H9.692V11.084H12.82V8.413C12.82 5.313 14.713 3.625 17.479 3.625C18.804 3.625 19.942 3.724 20.274 3.768V7.008L18.356 7.009C16.852 7.009 16.561 7.724 16.561 8.772V11.085H20.148L19.681 14.707H16.561V24H22.677C23.407 24 24 23.407 24 22.675V1.325C24 0.593 23.407 0 22.675 0Z"
                   fill="white"
-                />s
+                />
+                
               </svg>
             </Link>
             <Link href="">

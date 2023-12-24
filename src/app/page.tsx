@@ -3,6 +3,7 @@ import SupportNav from "./components/shared/SupportNav"
 import BannerLg from "./components/Home/BannerLg"
 import BannerSm from "./components/Home/BannerSm"
 import BannerSplit from "./components/Home/BannerSplit"
+import About from "./components/shared/About"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
             <BannerSm />
             <BannerSplit />
         </section>
+        <About />
     </div>
   )
    
