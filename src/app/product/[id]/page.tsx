@@ -6,7 +6,7 @@ import ProductHero from "@/app/components/Product/ProductHero"
 
 export default function ProductPage(){
     return (
-        <div>
+        <div className="">
             <h1>Product Page</h1>
             <div>
                 <ProductHero />
