@@ -2,13 +2,15 @@ export type LabelProp = {
     label: string
 }
 export type ProductTypes = {
-    productID: number,
-    productName: string,
-    productPrice: number,
-    productCategory: string,
-    productDescription: string,
-    productFeatures: string,
-    productIncludes: Array<{
+    id: number,
+    name: string,
+    price: number,
+    category: string,
+    slug: string,
+    new: boolean,
+    description: string,
+    features: string,
+    includes: Array<{
         quantity: number,
         item: string
     }>
