@@ -20,9 +20,9 @@ export default function CategoryPage() {
             try {
                 const product = await GetProductByCategory(db, slug)
                 setProductData(product)
-            } catch
+            } catch(error)
             {
-                throw new Error("Error in fetch requested data")
+                console.log("Error fetching data")
             }
         }
         fetchData()

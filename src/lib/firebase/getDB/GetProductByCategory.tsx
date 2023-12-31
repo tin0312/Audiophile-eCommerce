@@ -1,6 +1,6 @@
 import { ProductTypes } from "@/types/global"
-import {collection, getDocs, where, query, Firestore, QuerySnapshot} from "firebase/firestore"
-import { db } from "@/lib/firebase/firebaseConfig"
+import {collection, getDocs, where, query, Firestore} from "firebase/firestore"
+
 
 export default async function GetProductByCategory(db: Firestore, category: string){
         //get data from database based on category recieved
