@@ -2,14 +2,52 @@
 import ProductCard from "@/app/components/Category/ProductCard"
 import SupportNav from "@/app/components/shared/SupportNav"
 import About from "@/app/components/shared/About"
+import { useParams } from "next/navigation"
+import { useState, useEffect } from "react"
+import { ProductTypes } from "@/types/global"
+import { db } from "@/lib/firebase/firebaseConfig"
+import GetProductByCategory from "@/lib/firebase/getDB/GetProductByCategory"
 
-export default function CategoryPage(){
+
+export default function CategoryPage() {
+    const params = useParams()
+    const { slug } = params;
+    const [productData, setProductData] = useState<ProductTypes[] | null>(null)
+
+    // get product data
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const product = await GetProductByCategory(db, slug)
+                setProductData(product)
+            } catch(error)
+            {
+                console.log("Error fetching data")
+            }
+        }
+        fetchData()
+    }, [slug])
+
+    let productItem = null
+    if (productData) {
+        productItem = productData.map((product: ProductTypes, index: number) => (
+            < ProductCard key={index} product={product} />
+        ))
+    }
+
     return (
-        <div className = "category-container">
-            <h2>Category Name</h2>
-            <ProductCard />
-            <SupportNav />
-            <About />
+        <div className="category-container">
+            <div className="w-screen bg-dark-850 text-light-100 py-16 flex justify-center">
+                <h2 className="uppercase text-xl font-bold">{slug}</h2>
+            </div>
+            <div>
+                {/* Product Items section */}
+                <section>
+                    {productData ? productItem : ""}
+                </section>
+                <SupportNav />
+                <About />
+            </div>
         </div>
     )
 }
