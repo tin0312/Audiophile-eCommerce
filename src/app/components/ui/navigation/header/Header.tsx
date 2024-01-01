@@ -12,9 +12,9 @@ export default function Header() {
         </div>
         <div className="flex gap-6 uppercase text-sm">
           <Link href="/">Home</Link>
-          <Link href="/category/headphone">Headphones</Link>
-          <Link href="/category/earphone">Earphone</Link>
-          <Link href="/category/speaker">Speaker</Link>
+          <Link href="/category/headphones">Headphones</Link>
+          <Link href="/category/earphones">Earphone</Link>
+          <Link href="/category/speakers">Speaker</Link>
         </div>
         <div>
           <Cart />
