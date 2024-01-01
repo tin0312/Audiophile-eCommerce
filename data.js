@@ -1,4 +1,4 @@
-[
+export const productsData = [
   {
     "id": 1,
     "slug": "yx1-earphones",
