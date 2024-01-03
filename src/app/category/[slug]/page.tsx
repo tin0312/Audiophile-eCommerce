@@ -19,7 +19,6 @@ export default function CategoryPage() {
         const fetchData = async () => {
             try {
                 const product = await GetProductByCategory(db, slug as string)
-                
                 setProductData(product)
             } catch(error)
             {
