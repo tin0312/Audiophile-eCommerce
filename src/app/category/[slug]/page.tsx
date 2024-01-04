@@ -1,6 +1,6 @@
 'use client'
 import ProductCard from "@/app/components/Category/ProductCard"
-import Loader from "../../components/ui/navigation/loader"
+import Loader from "@/app/components/ui/navigation/Loader"
 import SupportNav from "@/app/components/shared/SupportNav"
 import About from "@/app/components/shared/About"
 import { useParams } from "next/navigation"
@@ -22,7 +22,7 @@ export default function CategoryPage() {
                 const product = await GetProductByCategory(db, slug as string)
                 setProductData(product)
             } catch (error) {
-                console.log("Error fetching data")
+                console.log("Error fetching data", error)
             }
         }
         const fetchingDelay = setTimeout(() => {
