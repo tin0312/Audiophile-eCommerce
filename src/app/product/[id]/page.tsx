@@ -43,11 +43,9 @@ export default function ProductPage() {
                 <a href="#" onClick={() => router.back()}>
                     <p className="opacity-50">Go Back</p>
                 </a>
-                {productDetails ?
-                    (<section className="my-52">
-                        <ProductHero product={productDetails} />
-                    </section>)
-                    : <Loader />}
+                <section className="my-52">
+                    {productDetails ? <ProductHero product={productDetails} /> : <Loader />}
+                </section>
                 <SupportNav />
                 <About />
             </div>
