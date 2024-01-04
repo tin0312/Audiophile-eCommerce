@@ -15,7 +15,7 @@ export default function SupportNav() {
           className="absolute bottom-24"
           />
           <h3 className="font-bold">HEADPHONES</h3>
-          <Link href="/category/headphone">
+          <Link href="/category/headphones">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>
@@ -28,7 +28,7 @@ export default function SupportNav() {
           className="absolute bottom-24"
           />
           <h3 className="font-bold">SPEAKERS</h3>
-          <Link href="/category/earphone">
+          <Link href="/category/earphones">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>
@@ -41,7 +41,7 @@ export default function SupportNav() {
           className="absolute bottom-24"
           />
           <h3 className="font-bold" >EARPHONES</h3>
-          <Link href="/category/speaker">
+          <Link href="/category/speakers">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>

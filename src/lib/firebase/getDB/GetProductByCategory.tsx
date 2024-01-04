@@ -16,4 +16,16 @@ export default async function GetProductByCategory(db: Firestore, category: stri
         
         return products
 }
+/*
+
+click on the navigation => /category/slug
+const productData = [
+{},
+{},
+{}
+
+]
+go over each item object with the matching slug and save them in an array 
+
+*/ 
 
