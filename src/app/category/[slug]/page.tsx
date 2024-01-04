@@ -10,15 +10,15 @@ import GetProductByCategory from "@/lib/firebase/getDB/GetProductByCategory"
 
 
 export default function CategoryPage() {
-    const params = useParams()
-    const { slug } = params;
+
+    const { slug } = useParams();
     const [productData, setProductData] = useState<ProductTypes[] | null>(null)
 
     // get product data
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const product = await GetProductByCategory(db, slug)
+                const product = await GetProductByCategory(db, slug as string)
                 setProductData(product)
             } catch(error)
             {
