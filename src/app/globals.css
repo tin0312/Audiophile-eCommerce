@@ -2,24 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /*Home Page*/
+#hero {
+  background: #191919;
+  background-image: url("/assets/images/pages/home/mobile/image-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
 
-#hero{
-    background: #191919;
+#banner-large {
+  background-image: url("/assets/images/pages/home/desktop/pattern-circles.svg");
+  background-color: #d87d4a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+#banner-small {
+  background-image: url("/assets/images/pages/home/mobile/image-speaker-zx7.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  #hero {
+    background-image: url("/assets/images/pages/home/tablet/image-header.jpg");
+    background-position: 70%;
+  }
+
+  #banner-small {
+    background-image: url("/assets/images/pages/home/tablet/image-speaker-zx7.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  #hero {
     background-image: url("/assets/images/pages/home/desktop/image-hero.jpg");
     background-size: contain;
-    background-repeat:no-repeat;
-    background-position: 70%;
-}
-#banner-large{
-    background-image: url("/assets/images/pages/home/desktop/pattern-circles.svg");
-    background-color: #D87D4A;
-    background-repeat: no-repeat;
+  }
+
+  #banner-large {
     background-size: 50%;
-}
-#banner-small{
+    background-position: unset;
+  }
+
+  #banner-small {
     background-image: url("/assets/images/pages/home/desktop/image-speaker-zx7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
 }
