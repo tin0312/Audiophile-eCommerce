@@ -7,7 +7,7 @@ export default function BannerLg() {
     <div>
       <div
         id="banner-large"
-        className="lg:flex-row md:px-20 lg:gap-1 mx-auto mt-20 flex w-4/5 flex-col items-center justify-center gap-10  rounded-xl px-3 py-12"
+        className="mx-auto mt-20 flex w-4/5 flex-col items-center justify-center gap-10 rounded-xl px-3 py-12  md:px-20 lg:flex-row lg:gap-1"
       >
         {/* Image Container */}
         <div>
@@ -16,13 +16,13 @@ export default function BannerLg() {
             width={250}
             height={300}
             alt="large-banner"
-            className="lg:w-full lg:ml-12  mx-auto max-w-xl"
+            className="mx-auto max-w-[180px] md:max-w-xl  lg:ml-12 lg:w-full"
           />
         </div>
         {/* Info Container  */}
-        <div className="lg:w-1/4 md:w-3/4 lg:items-start mx-auto flex flex-col items-center gap-6 text-light-100">
-          <h1 className=" lg:text-start text-center text-5xl">ZX9 SPEAKER</h1>
-          <p className="lg:text-start text-center text-sm leading-6 opacity-75">
+        <div className="mx-auto flex flex-col items-center gap-6 text-light-100 md:w-3/4 lg:w-1/4 lg:items-start">
+          <h1 className=" text-center text-5xl lg:text-start">ZX9 SPEAKER</h1>
+          <p className="text-center text-sm leading-6 opacity-75 lg:text-start">
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>

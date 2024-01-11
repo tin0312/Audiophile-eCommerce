@@ -6,15 +6,15 @@ export default function HeroBanner() {
   return (
     /*Hero Section*/
 
-    <section id="hero" className="mb-32 py-20  text-light-100">
+    <section id="hero" className="mb-32 py-28 text-light-100  md:py-20">
       {/* Info Container */}
-      <div className="lg:items-start  mx-auto flex w-4/5 flex-col items-center  gap-6">
-        <div className="lg:w-1/3 md:w-3/4 lg:items-start flex flex-col items-center gap-6 ">
+      <div className="mx-auto  flex w-4/5 flex-col items-center gap-6  lg:items-start">
+        <div className="flex flex-col items-center gap-6 md:w-3/4 lg:w-1/3 lg:items-start ">
           <p className="tracking-widest opacity-50">NEW PRODUCT</p>
-          <h1 className="lg:text-left md:text-6xl   text-center text-4xl font-bold tracking-wider">
+          <h1 className="text-center text-4xl   font-bold tracking-wider md:text-6xl lg:text-left">
             XX99 MARK II HEADPHONES
           </h1>
-          <p className="lg:text-left lg:leading-8 text-center text-base opacity-50">
+          <p className="text-center text-base opacity-50 lg:text-left lg:leading-8">
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>

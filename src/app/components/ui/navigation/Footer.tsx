@@ -3,31 +3,36 @@ import Logo from "../../shared/Logo";
 
 export default function Footer() {
   return (
-    <div className="relative bottom-0 h-1/5 bg-black text-white">
-      <div className="mx-auto flex h-full w-4/5 flex-col items-center py-20">
-        <div className="flex h-full w-full justify-between">
+    <div className="relative bottom-0 flex h-1/5 flex-col items-center bg-black text-white md:items-start">
+      <div className="mx-auto md:w-4/5">
+        <div className=" h-1 w-28 bg-primary-700" />
+      </div>
+      <div className="mx-auto flex h-full w-4/5 flex-col py-20 md:py-16 lg:py-20">
+        <div className="flex h-full w-full flex-col items-center justify-between gap-5 md:items-start lg:flex-row">
           <div>
             <Logo />
           </div>
-          <div className="flex gap-6 text-sm uppercase">
+          <div className="flex flex-col items-center gap-3 text-sm uppercase md:flex-row md:gap-6">
             <Link href="/">Home</Link>
             <Link href="/category/headphones">Headphones</Link>
             <Link href="/category/earphones">Earphones</Link>
             <Link href="/category/speakers">Speakers</Link>
           </div>
         </div>
-        <div className="flex h-full">
-          <div className="mt-8 flex flex-col gap-8">
-            <p className="w-1/2 opacity-50">
+        <div className="flex h-full flex-col items-center gap-7 lg:flex-row ">
+          <div className="mt-8 flex flex-col items-center gap-8 md:items-start  lg:gap-12">
+            <p className="text-center opacity-50 md:text-start lg:w-1/2">
               Audiophile is an all in one stop to fulfill your audio needs.
-              We&apos; a small team of music lovers and sound specialists who are
-              devoted to helping you get the most out of personal audio. Come
-              and visit our demo facility - we&apos;re open 7 days a week.
+              We&apos; a small team of music lovers and sound specialists who
+              are devoted to helping you get the most out of personal audio.
+              Come and visit our demo facility - we&apos;re open 7 days a week.
             </p>
-            <p className="opacity-50">Copyright 2021. All Rights Reserved</p>
+            <p className="opacity-50 md:self-start">
+              Copyright 2021. All Rights Reserved
+            </p>
           </div>
           {/* Social Icon Container */}
-          <div className="flex gap-4 items-center">
+          <div className="flex items-center gap-4 md:-mt-12 md:self-end lg:mt-0 lg:self-auto">
             <Link href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +45,6 @@ export default function Footer() {
                   d="M22.675 0H1.325C0.593 0 0 0.593 0 1.325V22.676C0 23.407 0.593 24 1.325 24H12.82V14.706H9.692V11.084H12.82V8.413C12.82 5.313 14.713 3.625 17.479 3.625C18.804 3.625 19.942 3.724 20.274 3.768V7.008L18.356 7.009C16.852 7.009 16.561 7.724 16.561 8.772V11.085H20.148L19.681 14.707H16.561V24H22.677C23.407 24 24 23.407 24 22.675V1.325C24 0.593 23.407 0 22.675 0Z"
                   fill="white"
                 />
-                
               </svg>
             </Link>
             <Link href="">
