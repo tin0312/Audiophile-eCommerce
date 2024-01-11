@@ -4,9 +4,18 @@ import Logo from "@/app/components/shared/Logo";
 import Cart from "./Cart";
 import { useState } from "react";
 import SupportNav from "@/app/components/shared/SupportNav";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
   const [isOpenNav, setIsOpenNav] = useState(false);
+
+  const links = [
+    { path: "/", label: "Home" },
+    { path: "/category/headphones", label: "Headphones" },
+    { path: "/category/earphones", label: "Earphones" },
+    { path: "/category/speakers", label: "Speakers" },
+  ];
 
   const openNav = () => {
     setIsOpenNav((prev) => !prev);
@@ -60,12 +69,17 @@ export default function Header() {
             <Logo />
           </Link>
           <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 transform gap-6  text-sm uppercase lg:mx-auto lg:flex lg:w-auto lg:items-center lg:space-x-1">
-            <Link href="/" className="tablet:bg-red-700">
-              Home
-            </Link>
-            <Link href="/category/headphones">Headphones</Link>
-            <Link href="/category/earphones">Earphones</Link>
-            <Link href="/category/speakers">Speakers</Link>
+            {links.map(({ path, label }) => (
+              <Link
+                key={label}
+                className={`transition-colors hover:text-primary-700 ${
+                  pathname == path ? "text-primary-700" : ""
+                }`}
+                href={path}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
           <Cart />
         </nav>
