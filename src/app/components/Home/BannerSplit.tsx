@@ -20,7 +20,7 @@ export default function BannerSplit() {
         {/* Info Container */}
           <div className="flex flex-col gap-4 rounded-md bg-dark-800 w-1/2 h-full justify-start p-24">
             <h3 className="text-xl font-bold">YX1 EARPHONES</h3>
-            <Link href="/product/yx1-earphones">
+            <Link href="/product/1">
               <ButtonSecondary label="SEE PRODUCT" />
             </Link>
           </div>

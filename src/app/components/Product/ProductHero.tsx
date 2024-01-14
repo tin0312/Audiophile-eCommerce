@@ -1,7 +1,8 @@
 import Image from "next/image"
-import ButtonPrimary from "../ui/button/ButtonPrimary"
+import ButtonPrimary from "@/app/components/ui/button/ButtonPrimary"
 import { ProductProp } from "@/types/global"
-import { useState } from "react"
+import AddToLS from "@/helpers/localStorage/AddToLS"
+
 
 export default function ProductHero({ product }: ProductProp) {
 
@@ -30,6 +31,7 @@ export default function ProductHero({ product }: ProductProp) {
                         label={"ADD TO CART"}
                         type={"button"}
                         style={"w-3/12"}
+                        onClick={() => AddToLS(product)}
                     />
                 </div>
             </div>

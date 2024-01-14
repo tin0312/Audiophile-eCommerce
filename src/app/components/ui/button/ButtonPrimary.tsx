@@ -2,8 +2,9 @@ type ButtonPrimaryProps = {
     type: "button" | "submit",
     style: string,
     label: string,
-    onClick?: ()=> void;
+    onClick?: () => void
 }
+
 
 export default function ButtonPrimary({type, style, onClick, label} : ButtonPrimaryProps){
     return (
