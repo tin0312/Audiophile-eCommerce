@@ -28,7 +28,7 @@ export default function SupportNav() {
           className="absolute bottom-24"
           />
           <h3 className="font-bold">SPEAKERS</h3>
-          <Link href="/category/earphones">
+          <Link href="/category/speakers">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>
