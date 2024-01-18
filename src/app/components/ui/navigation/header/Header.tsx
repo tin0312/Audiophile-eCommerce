@@ -90,10 +90,9 @@ export default function Header() {
             isOpenNav ? "" : "-translate-x-full  "
           }  transition-transform `}
         >
-          <div className=" flex w-full flex-col overflow-y-auto rounded-b-xl border-r bg-white px-6 pb-6 pt-10 shadow-2xl">
-            <div className="mb-8 flex items-center justify-center self-end"></div>
-            <div className=" w-full  py-20">
-              <SupportNav />
+          <div className="flex w-full flex-col overflow-y-auto rounded-b-xl border-r bg-white px-6 pb-6 shadow-2xl md:pb-16">
+            <div className=" w-full pt-14 md:pt-32">
+              <SupportNav isMobileNav={true} />
             </div>
           </div>
         </div>

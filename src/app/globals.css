@@ -52,7 +52,6 @@
 
   #banner-small {
     background-image: url("/assets/images/pages/home/desktop/image-speaker-zx7.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
   }
 }
