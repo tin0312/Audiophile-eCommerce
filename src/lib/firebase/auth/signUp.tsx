@@ -6,11 +6,11 @@ const auth = getAuth(app)
 
 export async function signUp(email: string, password: string){
     let result
-    let errorCode
+    let errorMessage
     try {
         result = await createUserWithEmailAndPassword(auth, email, password)
     } catch(error: any){
-        errorCode = authMessage(error.code)
+        errorMessage = authMessage(error.code)
     }
-    return { result, errorCode }
+    return { result, errorMessage }
 }

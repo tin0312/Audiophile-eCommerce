@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Logo from "@/app/components/shared/Logo";
 import Cart from "./Cart";
+import GuestIcon from "./GuestIcon";
 
 export default function Header() {
   return (
@@ -16,6 +17,10 @@ export default function Header() {
           <Link href="/category/earphones">Earphones</Link>
           <Link href="/category/speakers">Speakers</Link>
         </div>
+       
+        <div>
+          <GuestIcon />
+        </div> 
         <div>
           <Cart />
         </div>
