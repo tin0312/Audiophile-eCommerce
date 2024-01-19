@@ -11,16 +11,17 @@ export default function SignIn() {
     const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassWord] = useState('')
-    const [error, setError] = useState<string | undefined>()
+    const [error, setError] = useState<string | null>()
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
         try {
             const { result, errorMessage } = await signUp(email, password)
-            setError(errorMessage)
-            if (!error) {
+            console.log(result)
+           setError(errorMessage)
+            if (!errorMessage) {
                 router.push("/")
-            }
+            } 
         } catch (error: any) {
             setError(error)
         }

@@ -11,16 +11,19 @@ export default function SignIn() {
     const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassWord] = useState('')
-    const [error, setError] = useState<string | undefined>()
+    const [error, setError] = useState<string | null>()
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
         try {
             const { result, errorMessage } = await signIn(email, password)
+            console.log(result)
             setError(errorMessage)
-            if (!error) {
+            if (!errorMessage) {
                 router.push("/")
-            }
+                console.log("Signed in!")
+            } 
+           
         } catch (error: any) {
             setError(error)
         }
@@ -32,6 +35,7 @@ export default function SignIn() {
                     className="flex flex-col gap-4 w-1/4 mt-64 mx-auto"
                     >
                     <h2 className="text-center pb-10 uppercase text-lg font-bold">Log in with Audiphile Account</h2>
+                    {error && <p className="w-full py-3 px-4 border bg-red-300 rounded-lg">{error}</p>}
                     <FormInput
                         label="Email"
                         id="email"

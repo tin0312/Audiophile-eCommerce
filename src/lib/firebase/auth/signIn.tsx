@@ -5,10 +5,10 @@ import { authMessage } from "./authMessage";
 const auth = getAuth(app)
 
 export async function signIn(email: string, password: string){
-    let result
-    let errorMessage
+    let result = null
+    let errorMessage = null
     try{
-        result = signInWithEmailAndPassword(auth, email, password)
+        result = await signInWithEmailAndPassword(auth, email, password)
     } catch(error: any){
         errorMessage = authMessage(error.code)
     }
