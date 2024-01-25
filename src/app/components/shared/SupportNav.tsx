@@ -3,49 +3,77 @@ import ButtonArrow from "../ui/button/ButtonArrow";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function SupportNav() {
+interface SupportNavProps {
+  isMobileNav?: boolean;
+}
+
+export default function SupportNav({ isMobileNav }: SupportNavProps) {
   return (
     <div>
-      <div className="flex w-4/5 mx-auto gap-4 justify-between">
-        <div className="relative flex flex-col gap-3 items-center px-20 pt-20 pb-7 bg-light-300">
-          <Image src = "/assets/images/components/Categories/image-category-thumbnail-headphones.png" 
-          width = {150} 
-          height = {160} 
-          alt = "headphone-thumbnail"
-          className="absolute bottom-24"
+      <div
+        className={`${
+          isMobileNav ? "gap-12" : "gap-24"
+        } mx-auto flex w-4/5 flex-col justify-center  md:flex-row md:gap-4 lg:gap-6 `}
+      >
+        <div
+          className={` ${
+            isMobileNav ? "gap-1 pb-2 pt-5" : "gap-3 pb-7 pt-20"
+          }  relative flex max-w-full flex-col items-center  rounded-lg bg-light-300   md:w-1/3 lg:px-20`}
+        >
+          <Image
+            src="/assets/images/components/Categories/image-category-thumbnail-headphones.png"
+            width={150}
+            height={160}
+            alt="headphone-thumbnail"
+            className={`${
+              isMobileNav ? "bottom-10 w-1/3 md:w-3/4" : "bottom-24"
+            } absolute  `}
           />
-          <h3 className="font-bold">HEADPHONES</h3>
+          <h3 className="text-sm font-bold  lg:text-lg">HEADPHONES</h3>
           <Link href="/category/headphones">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>
 
-        <div className="relative flex flex-col gap-3 items-center px-20 pt-20 pb-7 bg-light-300">
-        <Image src = "/assets/images/components/Categories/image-category-thumbnail-speakers.png" 
-          width = {150} 
-          height = {160} 
-          alt = "speaker-thumbnail"
-          className="absolute bottom-24"
+        <div
+          className={` ${
+            isMobileNav ? "gap-1 pb-2 pt-5" : "gap-3 pb-7 pt-20"
+          }  relative flex max-w-full flex-col items-center  rounded-lg bg-light-300   md:w-1/3 lg:px-20`}
+        >
+          <Image
+            src="/assets/images/components/Categories/image-category-thumbnail-speakers.png"
+            width={150}
+            height={160}
+            alt="speaker-thumbnail"
+            className={`${
+              isMobileNav ? "bottom-10 w-1/3 md:w-3/4" : "bottom-24"
+            } absolute  `}
           />
-          <h3 className="font-bold">SPEAKERS</h3>
-          <Link href="/category/earphones">
-            <ButtonArrow label={"SHOP"} />
-          </Link>
-        </div>
-
-        <div className="relative flex flex-col gap-3  items-center px-20 pt-20 pb-7 bg-light-300">
-        <Image src = "/assets/images/components/Categories/image-category-thumbnail-earphones.png" 
-          width = {150} 
-          height = {160} 
-          alt = "earphone-thumbnail"
-          className="absolute bottom-24"
-          />
-          <h3 className="font-bold" >EARPHONES</h3>
+          <h3 className="text-sm font-bold  lg:text-lg">SPEAKERS</h3>
           <Link href="/category/speakers">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>
 
+        <div
+          className={` ${
+            isMobileNav ? "gap-1 pb-2 pt-5" : "gap-3 pb-7 pt-20"
+          }  relative flex max-w-full flex-col items-center  rounded-lg bg-light-300   md:w-1/3 lg:px-20`}
+        >
+          <Image
+            src="/assets/images/components/Categories/image-category-thumbnail-earphones.png"
+            width={150}
+            height={160}
+            alt="earphone-thumbnail"
+            className={`${
+              isMobileNav ? "bottom-10 w-1/3 md:w-3/4" : "bottom-24"
+            } absolute  `}
+          />
+          <h3 className="text-sm font-bold  lg:text-lg">EARPHONES</h3>
+          <Link href="/category/earphones">
+            <ButtonArrow label={"SHOP"} />
+          </Link>
+        </div>
       </div>
     </div>
   );
