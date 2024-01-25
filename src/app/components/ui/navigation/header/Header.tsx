@@ -2,13 +2,15 @@
 import Link from "next/link";
 import Logo from "@/app/components/shared/Logo";
 import Cart from "./Cart";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import SupportNav from "@/app/components/shared/SupportNav";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
   const [isOpenNav, setIsOpenNav] = useState(false);
+
+  const navbarRef = useRef<HTMLDivElement>(null); // Add type assertion for the ref
 
   const links = [
     { path: "/", label: "Home" },
@@ -18,18 +20,46 @@ export default function Header() {
   ];
 
   const openNav = () => {
-    setIsOpenNav((prev) => !prev);
+    setIsOpenNav(true);
   };
+
+  const closeNav = () => {
+    setIsOpenNav(false);
+  };
+
+  useEffect(() => {
+    // Close the navbar when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navbarRef.current &&
+        !navbarRef?.current.contains(event.target as Node)
+      ) {
+        closeNav();
+      }
+    };
+    // Add click event listener to the document
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpenNav, navbarRef]);
+
+  // Close the navbar when page changed
+  useEffect(() => {
+    closeNav();
+  }, [pathname]);
 
   return (
     <>
-      <div className="bg-dark-850">
+      <div ref={navbarRef} className="bg-dark-850">
         <nav className="relative mx-auto flex h-24 w-4/5  items-center justify-between  bg-dark-850   py-4 text-white">
           <div className="lg:hidden">
             {isOpenNav ? (
               <button
                 className="navbar-close flex w-4 items-center"
-                onClick={openNav}
+                onClick={closeNav}
               >
                 <svg
                   className="h-6 w-6 cursor-pointer text-white hover:text-primary-500"
@@ -39,9 +69,9 @@ export default function Header() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M6 18L18 6M6 6l12 12"
                   ></path>
                 </svg>
@@ -86,7 +116,7 @@ export default function Header() {
 
         {/* Mobile and Tablet Menu */}
         <div
-          className={`navbar-menu  absolute bottom-0 left-0 top-24 z-50 h-5/6 w-full ${
+          className={`navbar-menu  absolute  left-0 top-24 z-50 w-full ${
             isOpenNav ? "" : "-translate-x-full  "
           }  transition-transform `}
         >

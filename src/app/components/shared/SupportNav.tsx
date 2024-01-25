@@ -12,12 +12,12 @@ export default function SupportNav({ isMobileNav }: SupportNavProps) {
     <div>
       <div
         className={`${
-          isMobileNav ? "gap-14" : "gap-24"
+          isMobileNav ? "gap-12" : "gap-24"
         } mx-auto flex w-4/5 flex-col justify-center  md:flex-row md:gap-4 lg:gap-6 `}
       >
         <div
           className={` ${
-            isMobileNav ? "gap-1 pb-4 pt-8" : "gap-3 pb-7 pt-20"
+            isMobileNav ? "gap-1 pb-2 pt-5" : "gap-3 pb-7 pt-20"
           }  relative flex max-w-full flex-col items-center  rounded-lg bg-light-300   md:w-1/3 lg:px-20`}
         >
           <Image
@@ -26,7 +26,7 @@ export default function SupportNav({ isMobileNav }: SupportNavProps) {
             height={160}
             alt="headphone-thumbnail"
             className={`${
-              isMobileNav ? "bottom-14 w-1/3 md:w-3/4" : "bottom-24"
+              isMobileNav ? "bottom-10 w-1/3 md:w-3/4" : "bottom-24"
             } absolute  `}
           />
           <h3 className="text-sm font-bold  lg:text-lg">HEADPHONES</h3>
@@ -37,7 +37,7 @@ export default function SupportNav({ isMobileNav }: SupportNavProps) {
 
         <div
           className={` ${
-            isMobileNav ? "gap-1 pb-4 pt-8" : "gap-3 pb-7 pt-20"
+            isMobileNav ? "gap-1 pb-2 pt-5" : "gap-3 pb-7 pt-20"
           }  relative flex max-w-full flex-col items-center  rounded-lg bg-light-300   md:w-1/3 lg:px-20`}
         >
           <Image
@@ -46,18 +46,18 @@ export default function SupportNav({ isMobileNav }: SupportNavProps) {
             height={160}
             alt="speaker-thumbnail"
             className={`${
-              isMobileNav ? "bottom-14 w-1/3 md:w-3/4" : "bottom-24"
+              isMobileNav ? "bottom-10 w-1/3 md:w-3/4" : "bottom-24"
             } absolute  `}
           />
           <h3 className="text-sm font-bold  lg:text-lg">SPEAKERS</h3>
-          <Link href="/category/earphones">
+          <Link href="/category/speakers">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>
 
         <div
           className={` ${
-            isMobileNav ? "gap-1 pb-4 pt-8" : "gap-3 pb-7 pt-20"
+            isMobileNav ? "gap-1 pb-2 pt-5" : "gap-3 pb-7 pt-20"
           }  relative flex max-w-full flex-col items-center  rounded-lg bg-light-300   md:w-1/3 lg:px-20`}
         >
           <Image
@@ -66,11 +66,11 @@ export default function SupportNav({ isMobileNav }: SupportNavProps) {
             height={160}
             alt="earphone-thumbnail"
             className={`${
-              isMobileNav ? "bottom-14 w-1/3 md:w-3/4" : "bottom-24"
+              isMobileNav ? "bottom-10 w-1/3 md:w-3/4" : "bottom-24"
             } absolute  `}
           />
           <h3 className="text-sm font-bold  lg:text-lg">EARPHONES</h3>
-          <Link href="/category/speakers">
+          <Link href="/category/earphones">
             <ButtonArrow label={"SHOP"} />
           </Link>
         </div>
