@@ -54,7 +54,7 @@ export default function SignIn() {
                         style={"uppercase"}
                     />
                     <p className="text-center">
-                        <span className="opacity-50 pr-2">Don't have an account?</span>
+                        <span className="opacity-50 pr-2">Do not have an account?</span>
                         <Link href="/signup" className="hover:text-primary-700">Sign up</Link>
                     </p>
                 </form>
