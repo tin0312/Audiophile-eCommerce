@@ -13,7 +13,6 @@ export default function Header() {
   const pathname = usePathname();
   const [isOpenNav, setIsOpenNav] = useState(false);
   const { user } = useAuthContext() as AuthContextType;
-
   const navbarRef = useRef<HTMLDivElement>(null); // Add type assertion for the ref
 
   const links = [

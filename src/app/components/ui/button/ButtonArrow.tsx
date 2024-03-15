@@ -5,13 +5,15 @@ export default function ButtonArrow({ label }: LabelProp) {
   return (
     <div>
       <button>
-        <span className="opacity-50">{label}</span>
+        <span className="text-xs opacity-50 transition-colors hover:text-primary-700 lg:text-sm">
+          {label}
+        </span>
         <Image
           src="/assets/icons/shared/buttons/button-arrow-right.svg"
           alt="arrow-icon"
           width={8}
           height={16}
-          className="inline ml-2"
+          className="ml-2 inline"
         />
       </button>
     </div>
