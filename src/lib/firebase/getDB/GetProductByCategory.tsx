@@ -9,23 +9,11 @@ export default async function GetProductByCategory(db: Firestore, category: stri
         const querySnapshot = await getDocs(q)
         const products: ProductTypes[] = []
         //loop through the snapshot and push each product into the products array
-
             querySnapshot.forEach((doc) => {
                 products.push(doc.data() as ProductTypes)
             })
         
         return products
 }
-/*
 
-click on the navigation => /category/slug
-const productData = [
-{},
-{},
-{}
-
-]
-go over each item object with the matching slug and save them in an array 
-
-*/ 
 
