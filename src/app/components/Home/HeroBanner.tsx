@@ -19,7 +19,7 @@ export default function HeroBanner() {
             made for the passionate music enthusiast.
           </p>
         </div>
-        <Link href="/product/xx99-mark-two-headphones">
+        <Link href="/product/4">
           <ButtonPrimary type={"button"} label={"SEE PRODUCT"} style={""} />
         </Link>
       </div>

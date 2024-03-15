@@ -10,7 +10,7 @@ export default function BannerSplit() {
       >
         <div className="flex flex-col items-start justify-center gap-4 ">
           <h3 className="text-3xl font-bold tracking-wide">ZX7 SPEAKER</h3>
-          <Link href="/product/zx7-speaker">
+          <Link href="/product/6">
             <ButtonSecondary label="SEE PRODUCT" />
           </Link>
         </div>

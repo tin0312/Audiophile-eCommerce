@@ -10,6 +10,7 @@ export type ProductTypes = {
     new: boolean,
     description: string,
     features: string,
+    quantity: number,
     includes: Array<{
         quantity: number,
         item: string

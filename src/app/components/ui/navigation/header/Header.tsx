@@ -5,11 +5,14 @@ import Cart from "./Cart";
 import { useState, useEffect, useRef } from "react";
 import SupportNav from "@/app/components/shared/SupportNav";
 import { usePathname } from "next/navigation";
+import GuestIcon from "./GuestIcon";
+import UserIcon from "./UserIcon";
+import { AuthContextType, useAuthContext } from "@/context/AuthContext";
 
 export default function Header() {
   const pathname = usePathname();
   const [isOpenNav, setIsOpenNav] = useState(false);
-
+  const { user } = useAuthContext() as AuthContextType;
   const navbarRef = useRef<HTMLDivElement>(null); // Add type assertion for the ref
 
   const links = [
@@ -110,6 +113,7 @@ export default function Header() {
                 {label}
               </Link>
             ))}
+             <div>{user ? <UserIcon /> : <GuestIcon />}</div>
           </div>
           <Cart />
         </nav>
@@ -125,6 +129,7 @@ export default function Header() {
               <SupportNav isMobileNav={true} />
             </div>
           </div>
+            <div>{user ? <UserIcon /> : <GuestIcon />}</div>
         </div>
       </div>
     </>

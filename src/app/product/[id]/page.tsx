@@ -2,7 +2,7 @@
 
 import SupportNav from "@/app/components/shared/SupportNav"
 import About from "@/app/components/shared/About"
-import Accessories from "@/app/components/Product/Accessories"
+import Accessories from "@/app/components/Product/Accessory"
 import ProductDetails from "@/app/components/Product/ProductDetails"
 import ProductGallery from "@/app/components/Product/ProductGallery"
 import ProductHero from "@/app/components/Product/ProductHero"
@@ -43,9 +43,16 @@ export default function ProductPage() {
                 <a href="#" onClick={() => router.back()}>
                     <p className="opacity-50">Go Back</p>
                 </a>
-                <section className="my-52">
-                    {productDetails ? <ProductHero product={productDetails} /> : <Loader />}
-                </section>
+                { 
+                    productDetails ?                
+                (<section className="my-52">
+                    <ProductHero product={productDetails}/>
+                    <ProductDetails product= {productDetails}/>
+                    <ProductGallery product={productDetails}/>
+                </section>)
+                :
+                <Loader />
+                } 
                 <SupportNav />
                 <About />
             </div>
