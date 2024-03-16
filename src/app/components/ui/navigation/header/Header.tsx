@@ -113,9 +113,11 @@ export default function Header() {
                 {label}
               </Link>
             ))}
-             <div>{user ? <UserIcon /> : <GuestIcon />}</div>
           </div>
-          <Cart />
+          <div className="flex justify-center items-center gap-7">
+            <div className="hidden lg:block">{user ? <UserIcon /> : <GuestIcon />}</div>
+            <Cart />
+          </div>
         </nav>
 
         {/* Mobile and Tablet Menu */}
@@ -125,11 +127,10 @@ export default function Header() {
           }  transition-transform `}
         >
           <div className="flex w-full flex-col overflow-y-auto rounded-b-xl border-r bg-white px-6 pb-6 shadow-2xl md:pb-16">
-            <div className=" w-full pt-14 md:pt-32">
+            <div className=" w-full pt-20 md:pt-40">
               <SupportNav isMobileNav={true} />
             </div>
           </div>
-            <div>{user ? <UserIcon /> : <GuestIcon />}</div>
         </div>
       </div>
     </>

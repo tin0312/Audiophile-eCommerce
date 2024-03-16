@@ -12,7 +12,7 @@ export default function SupportNav({ isMobileNav }: SupportNavProps) {
     <div>
       <div
         className={`${
-          isMobileNav ? "gap-12" : "gap-24"
+          isMobileNav ? "gap-20" : "gap-24"
         } mx-auto flex w-4/5 flex-col justify-center  md:flex-row md:gap-4 lg:gap-6 `}
       >
         <div

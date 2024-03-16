@@ -1,3 +1,4 @@
+"use client"
 type FormInputProps = {
     label: string;
     id: string;
