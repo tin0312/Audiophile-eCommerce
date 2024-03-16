@@ -24,8 +24,7 @@ export default function ProductPage() {
         const fetchData = async () => {
             try {
                 const productDetails = await getProduct(db, id as string)
-                setProductDetails(productDetails)
-                console.log(productDetails)
+                setProductDetails(productDetails) 
             } catch (e) {
                 console.log("Error fetching product", e)
             }
@@ -38,14 +37,14 @@ export default function ProductPage() {
     }, [id,])
     const router = useRouter()
     return (
-        <div className="my-40">
+        <div className="my-20 md:my-40">
             <div className="w-4/5 mx-auto">
                 <a href="#" onClick={() => router.back()}>
                     <p className="opacity-50">Go Back</p>
                 </a>
                 { 
                     productDetails ?                
-                (<section className="my-52">
+                (<section className="my-36 md:my-52">
                     <ProductHero product={productDetails}/>
                     <ProductDetails product= {productDetails}/>
                     <ProductGallery product={productDetails}/>

@@ -8,9 +8,9 @@ export default function ProductDetails({ product } : ProductProp){
 
     return(
         // Detail container 
-        <div className = "flex gap-32 pt-16">
+        <div className = "flex flex-col md:flex-row gap-20 md:gap-32 pt-16">
             {/* Feature container */}
-            <div className="w-1/2">
+            <div className="w-100 md:w-1/2">
                 <h5 className="uppercase font-bold text-xl pb-5">Features</h5>
                 <p className="opacity-50">{product.features}</p>
             </div>

@@ -6,7 +6,7 @@ export default function ProductGallery({ product }: ProductProp) {
     return (
         // Product Detail Gallery
         <section>
-            <div className="flex gap-4 mt-16">
+            <div className="flex flex-col md:flex-row gap-4 mt-16">
                 {/* Small image container */}
                 <div className = "flex gap-4 flex-col">
                     {/* Firts small image*/}
