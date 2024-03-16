@@ -114,8 +114,16 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center items-center gap-7">
-            <div className="hidden lg:block">{user ? <UserIcon /> : <GuestIcon />}</div>
+          <div className="flex relative items-center justify-center gap-7">
+            {/* Mobile sign-in/sign-up */}
+            <div className="absolute right-5">
+              <div className="lg:hidden">
+                {user ? <UserIcon /> : <GuestIcon />}
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              {user ? <UserIcon /> : <GuestIcon />}
+            </div>
             <Cart />
           </div>
         </nav>
