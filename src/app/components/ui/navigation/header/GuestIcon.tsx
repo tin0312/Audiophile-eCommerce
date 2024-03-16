@@ -1,11 +1,8 @@
 "use client"
 import Link from "next/link";
 
-interface GuestIconProps {
-  isMobileNav?: boolean;
-}
 
-export default function GuestIcon({isMobileNav} : GuestIconProps) {
+export default function GuestIcon() {
   return (
     <div className="flex items-center justify-center gap-3">
       <Link href="/signin">

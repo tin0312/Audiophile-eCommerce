@@ -30,7 +30,7 @@ export default function SignIn() {
             <section className= "mb-60">
                 <form 
                     onSubmit={handleSubmit}
-                    className="flex flex-col gap-4 w-1/4 mt-64 mx-auto"
+                    className="flex flex-col gap-4 w-4/5 md:w-1/4 mt-64 mx-auto"
                     >
                     <h2 className="text-center pb-10 uppercase text-lg font-bold">Sign up with Audiphile Account</h2>
                     <FormInput
