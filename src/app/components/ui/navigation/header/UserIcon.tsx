@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
 import { useAuthContext, AuthContextType } from "@/context/AuthContext";
-
 
 export default function UserIcon() {
   const { user, logOut } = useAuthContext() as AuthContextType;
@@ -10,7 +9,10 @@ export default function UserIcon() {
     <div className="flex gap-4">
       {/* Icon container */}
       <div className="flex items-center">
-        <span className="hover:text-primary-700 hover:cursor-pointer">
+        <span
+          onClick={() => logOut()}
+          className="hover:cursor-pointer hover:text-primary-700"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -30,9 +32,14 @@ export default function UserIcon() {
       {/* log out container */}
       <div className="flex flex-col gap-2">
         {/* user email display */}
-        <p className="text-sm normal-case opacity-50">{user?.email}</p>
+        <p className="hidden text-sm normal-case opacity-50 md:block">
+          {user?.email}
+        </p>
         {/* log out button */}
-        <button className="hover:text-primary-700" onClick={() => logOut()}>
+        <button
+          className="hidden hover:text-primary-700"
+          onClick={() => logOut()}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

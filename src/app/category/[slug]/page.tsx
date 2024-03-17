@@ -44,7 +44,13 @@ export default function CategoryPage() {
       <div>
         {/* Product Items section */}
         <section className="mb-44 mt-20">
-          {productData ? productItem : <Loader />}
+          {productData ? (
+            productItem
+          ) : (
+            <div>
+              <Loader />
+            </div>
+          )}
         </section>
         <SupportNav />
         <About />
