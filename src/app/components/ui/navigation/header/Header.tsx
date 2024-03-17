@@ -121,7 +121,11 @@ export default function Header() {
                 {user ? <UserIcon /> : <GuestIcon />}
               </div>
             </div>
-            {user ? <UserIcon /> : <GuestIcon />}
+            <div className="hidden lg:block">
+              {" "}
+              {user ? <UserIcon /> : <GuestIcon />}
+            </div>
+
             <Cart />
           </div>
         </nav>
