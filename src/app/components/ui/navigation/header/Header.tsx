@@ -121,6 +121,7 @@ export default function Header() {
                 {user ? <UserIcon /> : <GuestIcon />}
               </div>
             </div>
+            {user ? <UserIcon /> : <GuestIcon />}
             <Cart />
           </div>
         </nav>

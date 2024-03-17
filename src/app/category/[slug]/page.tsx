@@ -43,7 +43,7 @@ export default function CategoryPage() {
       </div>
       <div>
         {/* Product Items section */}
-        <section className="mb-44 mt-20">
+        <section className="mt-20">
           {productData ? (
             productItem
           ) : (
