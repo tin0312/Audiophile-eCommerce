@@ -14,7 +14,7 @@ export default function ButtonPrimary({
   return (
     <button
       type={type}
-      className={`bg-primary-700 px-6 py-3 text-light-100 transition-all hover:bg-primary-500 ${style}`}
+      className={`bg-primary-700 px-4 py-3 md:px-6 md:py-3 text-light-100 transition-all hover:bg-primary-500 ${style}`}
       onClick={onClick}
     >
       {label}

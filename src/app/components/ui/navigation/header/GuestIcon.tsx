@@ -1,10 +1,12 @@
+"use client"
 import Link from "next/link";
+
 
 export default function GuestIcon() {
   return (
     <div className="flex items-center justify-center gap-3">
       <Link href="/signin">
-        <span className="hover:text-primary-700">
+        <span className="hover:text-primary-700 hover:cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -22,11 +24,11 @@ export default function GuestIcon() {
         </span>
       </Link>
       <div>
-        <p className="text-sm uppercase opacity-50">Guest</p>
+        <p className="hidden lg:block text-xs uppercase opacity-50">Guest</p>
         <Link href="/signin">
           <div className="flex items-center gap-1">
-            <p className="text-sm uppercase opacity-50">Sign in</p>
-            <span className="text-primary-700">
+            <p className="hidden lg:block text-sm uppercase opacity-50">Sign in</p>
+            <span className="hidden lg:block text-primary-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
